@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Shield, Globe, Server, FileCheck, Lock, History, Settings } from 'lucide-react';
+import { Shield, Globe, Server, FileCheck, Lock, History, Settings, Mail } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -25,14 +25,7 @@ const Index = () => {
               CyberSec Dashboard
             </h1>
           </div>
-          <div className="flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="border-gray-600 text-gray-300 hover:bg-gray-800">
-              <Settings className="h-4 w-4 mr-2" />
-              Settings
-            </Button>
-          </div>
         </div>
-
         {/* Navigation Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
           <TabsList className="grid w-full grid-cols-2 bg-gray-800 border border-gray-700">

@@ -1,6 +1,8 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 import { Mail, CheckCircle, XCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -24,10 +26,10 @@ const EmailValidator = () => {
   };
 
   return (
-    <div className="space-y-4 p-4 bg-gray-700 rounded-lg border border-gray-600">
-      <div className="flex items-center space-x-2 mb-4">
-        <Mail className="h-5 w-5 text-cyan-400" />
-        <span className="font-medium">Email Validator</span>
+    <Card className="bg-gray-800 border-gray-700 p-6 hover:border-cyan-500 transition-colors">
+      <div className="flex items-center space-x-3 mb-4">
+        <Mail className="h-6 w-6 text-cyan-400" />
+        <h2 className="text-xl font-semibold text-gray-100">Email Validator</h2>
       </div>
       <div className="flex space-x-2">
         <input
@@ -42,7 +44,7 @@ const EmailValidator = () => {
         </Button>
       </div>
       {isValid !== null && (
-        <div className="flex items-center space-x-2 mt-2">
+        <div className="flex items-center space-x-2 mt-4">
           {isValid ? (
             <CheckCircle className="h-4 w-4 text-green-400" />
           ) : (
@@ -53,7 +55,7 @@ const EmailValidator = () => {
           </Badge>
         </div>
       )}
-    </div>
+    </Card>
   );
 };
 
