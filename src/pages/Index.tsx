@@ -9,6 +9,7 @@ import IpChecker from '@/components/security/IpChecker';
 import FileHashVerifier from '@/components/security/FileHashVerifier';
 import PasswordTester from '@/components/security/PasswordTester';
 import ScanHistory from '@/components/security/ScanHistory';
+import EmailValidator from '@/components/security/E-mailValidator';
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -87,6 +88,15 @@ const Index = () => {
                   <h2 className="text-xl font-semibold text-gray-100">Password Strength Tester</h2>
                 </div>
                 <PasswordTester />
+              </Card>
+
+              {/* Email Validator */}
+              <Card className="bg-gray-800 border-gray-700 p-6 hover:border-cyan-500 transition-colors">
+                <div className="flex items-center space-x-3 mb-4">
+                  <Mail className="h-6 w-6 text-cyan-400" />
+                  <h2 className="text-xl font-semibold text-gray-100">Email Validator</h2>
+                </div>
+                <EmailValidator />
               </Card>
             </div>
           </TabsContent>
